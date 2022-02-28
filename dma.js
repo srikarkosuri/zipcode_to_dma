@@ -1704,23 +1704,23 @@ const dma524 = [28902	,
 39901	];
 
 //mapping
-var dma = 999
+var zipcodeDMA = 999
 //hardcoded zipcode as an example below, can use the variable
 var zipcode = 80633
 if(dma819.includes(zipcode)){
-  dma = 819;
+  zipcodeDMA = 819;
 }
 else if(dma528.includes(zipcode)){
-  dma = 528;
+  zipcodeDMA = 528;
 }
 else if(dma751.includes(zipcode)){
-  dma = 751;
+  zipcodeDMA = 751;
 }
 else if(dma524.includes(zipcode)){
-  dma = 524;
+  zipcodeDMA = 524;
 }
-console.log(dma); 
-return dma; 
+console.log(zipcodeDMA); 
+return zipcodeDMA; 
 //Probably just need the last line, used console.log as test of logic 
 
 
