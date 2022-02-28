@@ -1,3 +1,7 @@
+Qualtrics.SurveyEngine.addOnload(function()
+{
+	  var qid=this.questionId;	
+});
 
 function calcDMA(zipcode){
 const dma819 = [98001 ,
@@ -1706,22 +1710,22 @@ const dma524 = [28902	,
 39901	];
 
 //mapping
-var zipcodeDMA = 999
+var zipdma = 999
 //hardcoded zipcode as an example below, can use the variable
 if(dma819.includes(zipcode)){
-  zipcodeDMA = 819;
+  return 819;
 }
 else if(dma528.includes(zipcode)){
-  zipcodeDMA = 528;
+  return 528;
 }
 else if(dma751.includes(zipcode)){
-  zipcodeDMA = 751;
+  return 751;
 }
 else if(dma524.includes(zipcode)){
-  zipcodeDMA = 524;
+  return 524;
 }
-console.log(zipcodeDMA); 
-return zipcodeDMA; 
+//console.log(zipcodeDMA); 
+return zipdma; 
 //Probably just need the last line, used console.log as test of logic 
 }
 
@@ -1732,4 +1736,4 @@ var zipcodeDMA = calcDMA(zipcode);
 
 Qualtrics.SurveyEngine.setEmbeddedData('zipcodeDMA', calcDMA(zipcode));
 Qualtrics.SurveyEngine.setEmbeddedData('zipcode', zipcode);
-})
+});
